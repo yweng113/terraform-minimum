@@ -1,3 +1,5 @@
+variable "username" {}
+
 resource "random_id" "random" {
   keepers {
     uuid = "${uuid()}"
@@ -8,4 +10,8 @@ resource "random_id" "random" {
 
 output "random" {
   value = "${random_id.random.hex}"
+}
+
+output "username" {
+  value = "Username is ${var.username}"
 }
