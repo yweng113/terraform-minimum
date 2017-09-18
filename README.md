@@ -1,3 +1,3 @@
-# terraform-random
+# terraform-minimum
 
-This is a sample repository of Terraform interaction with GitHub in Terraform Enterprise.
+A sample Terraform codebase that does almost nothing.
