@@ -9,7 +9,7 @@ resource "random_id" "random" {
 }
 
 output "random" {
-  value = "${random_id.random.hex}"
+  value = "Changed to: ${random_id.random.hex}"
 }
 
 output "username" {
