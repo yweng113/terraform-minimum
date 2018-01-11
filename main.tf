@@ -1,15 +1,11 @@
 variable "username" {}
 
-resource "random_id" "random" {
-  keepers {
-    uuid = "${uuid()}"
-  }
-
-  byte_length = 8
+resource "null_resource" "random" {
+  # nothing; only changes when configuration edited.
 }
 
 output "random" {
-  value = "Changed to: ${random_id.random.hex}"
+  value = "Changed to: ${null_resource.random.id}"
 }
 
 output "username" {
