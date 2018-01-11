@@ -1,5 +1,7 @@
 variable "username" {}
 
+provider "random" {} # an empty for destroying old resources
+
 resource "null_resource" "random" {
   # nothing; only changes when configuration edited.
 }
