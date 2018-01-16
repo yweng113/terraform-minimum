@@ -3,7 +3,10 @@ variable "username" {}
 provider "random" {} # an empty for destroying old resources
 
 resource "null_resource" "random" {
-  # nothing; only changes when configuration edited.
+  triggers = {
+    username = "${var.username}"
+  }
+  # only changes when configuration edited, or when username changes.
 }
 
 output "random" {
