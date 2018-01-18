@@ -1,6 +1,6 @@
 variable "username" {}
 variable "prior_workspace" {
-  default = ""
+  default = "nicktech/minimum-prod"
 }
 
 provider "random" {} # an empty for destroying old resources
