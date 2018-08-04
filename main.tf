@@ -7,9 +7,6 @@ resource "null_resource" "random" {
     username = "${var.username}"
   }
   # only changes when configuration edited, or when username changes.
-  provisioner "local-exec" {
-    command = "sleep 20"
-  }
 }
 
 output "random" {
