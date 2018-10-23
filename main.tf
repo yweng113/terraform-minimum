@@ -8,7 +8,7 @@ resource "null_resource" "random" {
   }
   # only changes when configuration edited, or when username changes.
   provisioner "local-exec" {
-    command = "sleep 20"
+    command = "sleep 600"
   }
 }
 
