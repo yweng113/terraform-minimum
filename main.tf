@@ -12,6 +12,10 @@ resource "null_resource" "random" {
   }
 }
 
+module "child" {
+  source = "./child"
+}
+
 output "random" {
   value = "Changed to: ${null_resource.random.id}"
 }
