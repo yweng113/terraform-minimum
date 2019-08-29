@@ -24,7 +24,7 @@ data "terraform_remote_state" "dev" {
   workspace = "dev"
   config = {
     organization = "nicktech"
-    workspaces {
+    workspaces = {
       # name = "minimum-dev"
       prefix = "minimum-"
     }
