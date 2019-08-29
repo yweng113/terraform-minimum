@@ -24,7 +24,8 @@ data "terraform_remote_state" "dev" {
   config = {
     organization = "nicktech"
     workspaces = {
-      name = "minimum-dev"
+      # name = "minimum-dev"
+      prefix = "minimum-"
     }
   }
 }
@@ -33,3 +34,6 @@ output "username-dev" {
   value = data.terraform_remote_state.dev.outputs.username
 }
 
+output "all-dev" {
+  value = data.terraform_remote_state.dev.outputs
+}
