@@ -1,10 +1,12 @@
-variable "username" {}
+variable "username" {
+}
 
-provider "random" {} # an empty for destroying old resources
+provider "random" { # an empty for destroying old resources
+}
 
 resource "null_resource" "random" {
   triggers = {
-    username = "${var.username}"
+    username = var.username
   }
   # only changes when configuration edited, or when username changes.
 }
@@ -28,5 +30,6 @@ data "terraform_remote_state" "dev" {
 }
 
 output "username-dev" {
-  value = "${data.terraform_remote_state.dev.username}"
+  value = data.terraform_remote_state.dev.outputs.username
 }
+
