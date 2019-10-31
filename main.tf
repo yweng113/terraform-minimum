@@ -27,7 +27,7 @@ output "username" {
 
 data "terraform_remote_state" "dev" {
   backend = "remote"
-  workspace = "terraform-minimum"
+  workspace = "minimum"
   config = {
     organization = "ywengdemo"
     workspaces = {
